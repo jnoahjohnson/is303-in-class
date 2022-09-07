@@ -1,12 +1,11 @@
-
-# Output
+# Description: Output in python
+# Name: Noah Johnson
 teamMotto = "Win"
 print(teamMotto * 3)
 
 sPronoun = "I"
 sVerb = "want"
 sNoun = "candy"
-print(sPronoun, sVerb, sNoun, sep = "-", end = "!" )
 print(sPronoun, sVerb, sNoun, sep = "-", end = "!" )
 
 print("{0}, {1}, {2}".format("John", "Doe", 20))
