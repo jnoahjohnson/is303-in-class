@@ -115,3 +115,6 @@ myNum = 1
 while myNum <= 3:
     print(myNum)
     myNum += 1
+
+for myNum in range(1, 4):
+    print(myNum)
