@@ -1,3 +1,5 @@
+# There are a lot of errors in here. Help me fix the program
+
 def get_grade_value(grade):
     if grade == "A":
         return 4.0

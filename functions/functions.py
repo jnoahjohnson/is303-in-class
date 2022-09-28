@@ -1,4 +1,4 @@
-from functions.grades import get_letter_grade
+from grades import get_letter_grade
 
 is303 = int(input("What is your IS 303 grade? (0-100) "))
 letterGrade = get_letter_grade(is303)
