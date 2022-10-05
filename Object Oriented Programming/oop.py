@@ -1,31 +1,38 @@
 class Car():
-    def __init__(self, myColor, type, isUnlocked, myModel, myMake):
-        self.make = myMake
+    make = "Hyundai"
+
+    def __init__(self, myModel, myColor, type, isUnlocked, numWheels=4, mpg=None):
         self.model = myModel
         self.color = myColor
         self.type = type
-        self.numWheels = 4
+        self.numWheels = numWheels
         self.isUnlocked = isUnlocked
+
+        if numWheels == 2:
+            self.body = "Motorcycle"
+        else:
+            self.body = "Car"
+
+        self.mpg = mpg
+
 
     def drive(self):
         print("Vroom vroom...")
     
     def paint(self, newColor):
         self.color = newColor
+    
+    def checkEfficiency(self):
+        if (self.mpg != None and self.mpg > 25) or self.type == "Electric":
+            return True
+        else:
+            return False
 
 
-myCar = Car("Hyundai", "Ioniq", "Gray", "Electric", True)
 
-myDreamCar = Car("Tesla", "Cybertruck", "Space Gray", "Electric", False)
+carModel = input("What is the model? ")
 
-print("My Car Make", myCar.make)
-print("My Dream Car Make", myDreamCar.make)
+myCar = Car(carModel, "Gray", "Electric", True)
+myOtherCar = Car("Sonata", "Silver", "Gas", False, 2, 16)
 
-myCar.drive()
-
-myCar.paint("Blue")
-print(myCar.color)
-print(myDreamCar.color)
-
-print(myCar.type)
-
+print(myCar.checkEfficiency())
