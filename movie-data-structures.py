@@ -19,6 +19,8 @@ class Movie():
         self.ageRating = ageRating
         self.userScore = 0
         self.isInTheaters = False
+
+        self.actors = []
     
     def getDescription(self):
         # "<title> was directed by <director> and has a rating of <userScore>"
@@ -27,27 +29,7 @@ class Movie():
     def addToTheater(self):
         self.isInTheaters = True
 
-movieDirector = Director("Denis Villenue", 50, 2)
-movieDirector.introduction()
-myMovie = Movie("Dune", movieDirector, "PG-13")
-print(myMovie.title)
+    def showActors(self):
+        for actor in self.actors:
+            print(actor)
 
-print(myMovie.getDescription())
-
-myMovie.addToTheater()
-print(myMovie.isInTheaters)
-
-# Loop and get user ratings
-
-# How many users?
-numUsers = int(input("How many users rated the movie? "))
-totalRating = 0
-
-for user in range(numUsers):
-    userRating = float(input("What is your rating of the movie? "))
-    totalRating += userRating
-
-averageRating = totalRating / numUsers
-myMovie.userScore = averageRating
-
-print(myMovie.getDescription())
