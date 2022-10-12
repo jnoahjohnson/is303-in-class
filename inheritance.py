@@ -26,13 +26,6 @@ newStudent.introduction()
 #   I am majoring in Information Systems
 
 
-class Book():
-    def __init__(self, title, author, pages):
-        # Public Attributes
-        self.title = title
-        self.author = author
-        self.pages = pages
-
-newBook = Book("The Hobbit", "J.R.R. Tolkien", 295)
-print(newBook.title)
-# Output: The Hobbit
+class Movie():
+    def __init__(self):
+        self.title = ""
