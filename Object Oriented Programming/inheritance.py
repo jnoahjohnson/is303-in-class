@@ -19,7 +19,17 @@ class Student(Person):
         print("I am switching my major from " + self.major + " to " + newMajor)
         self.major = newMajor
 
-newStudent = Student("Noah", 24, "Information Systems")
+class Teacher(Person):
+    def __init__(self, name, age, subject):
+        super().__init__(name, age)
+        self.subject = subject
+    
+    def introduction(self):
+        super().introduction()
+        print("I teach " + self.subject)
+
+
+newStudent = Teacher("Noah", 24, "IS303")
 newStudent.introduction()
 # Output: 
 #   Hello, my name is Noah and I am 24 years old

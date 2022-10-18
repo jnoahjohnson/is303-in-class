@@ -11,6 +11,12 @@ class Director(Person):
     def introduction(self):
         print("My name is " + self.name + " and I have " + str(self.numOscars) + " oscars")
 
+class Actor(Person):
+    def __init__(self, name, age, starStatus):
+        super().__init__(name, age)
+        self.starStatus = starStatus
+
+
 class Movie():
     def __init__(self, title, director, ageRating):
         # Title, Director, Age Rating, User Score, Is In Theaters
@@ -29,7 +35,15 @@ class Movie():
     def addToTheater(self):
         self.isInTheaters = True
 
-    def showActors(self):
+    def printActors(self):
         for actor in self.actors:
-            print(actor)
+            print(actor.name)
 
+
+movie = Movie("Avatar", Director("James Cameron", 65, 3), "PG-13")
+print(movie.title)
+
+movie.actors.append(Actor("Zoe Saldana", 45, "VERY MUCH A STAR"))
+movie.actors.append(Actor("Sam Worthington", 45, "NOT VERY MUCH A STAR"))
+
+movie.printActors()

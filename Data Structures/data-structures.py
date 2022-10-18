@@ -44,24 +44,24 @@ class Author():
 # Add author names to dictionary for loop
 
 # Implementing a stack in python
-# authors = []
-# authors.append("Jane Austen")
-# authors.append("Charlotte Bronte")
-# authors.append("Emily Bronte")
-# authors.append("George Eliot")
+authors = []
+authors.append("Jane Austen")
+authors.append("Charlotte Bronte")
+authors.append("Emily Bronte")
+authors.append("George Eliot")
 
-# print("LIFO Stack")
-# print("----------")
+print("LIFO Stack")
+print("----------")
 
-# for count in range(len(authors) - 1, -1, -1):
-#     print(authors[count])
+for count in range(len(authors) - 1, -1, -1):
+    print(authors[count])
 
-# while len(authors) > 0:
-#     authors.pop()
-#     print("\n" + str(len(authors)) + " items remain in the stack")
-#     print("---------------------------")
-#     for iCount in range(len(authors) - 1, -1, -1) :
-#         print(authors[iCount])
+while len(authors) > 0:
+    authors.pop()
+    print("\n" + str(len(authors)) + " items remain in the stack")
+    print("---------------------------")
+    for iCount in range(len(authors) - 1, -1, -1) :
+        print(authors[iCount])
 
 # Queue
 authors = []
